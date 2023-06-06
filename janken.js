@@ -1,19 +1,34 @@
 
-function getComputerChoice() {
-  var ComputerChoice = Math.floor(Math.random() * 3)
+function getComputerSelection() {
+  var ComputerSelection = Math.floor(Math.random() * 3)
   
-    if (ComputerChoice == 0) {
+    if (ComputerSelection == 0) {
         console.log("Rock");
     }
 
-    else if (ComputerChoice == 1){
+    else if (ComputerSelection == 1){
         console.log("Paper");
     }
 
-    else if(ComputerChoice == 2){
+    else if(ComputerSelection == 2){
         console.log("Scissors");
     }
 
 }
 
-getComputerChoice()
+/*getComputerSelection()*/
+
+function getPlayerSelection() {
+    var PlayerSelection = prompt("Choose Your Weapon.");
+
+    function capitalize(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+    }
+    
+    console.log(capitalize(PlayerSelection))
+}
+
+getPlayerSelection ()
+
+
+

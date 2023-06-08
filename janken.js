@@ -19,16 +19,16 @@ function getComputerSelection() {
 /*getComputerSelection()*/
 
 function getPlayerSelection() {
-    var PlayerSelection = prompt("Choose Your Weapon.");
-
-    function capitalize(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-    }
-    
-    console.log(capitalize(PlayerSelection))
+    return prompt("Choose Your Weapon.");
 }
 
-getPlayerSelection ()
+const PlayerSelection = getPlayerSelection()
+
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
+console.log("You chose " + capitalize(PlayerSelection))
 
 
 

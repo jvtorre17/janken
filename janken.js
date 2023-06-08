@@ -23,13 +23,43 @@ function getPlayerSelection() {
     return prompt("Choose Your Weapon.");
 }
 
-const PlayerSelection = getPlayerSelection()
-
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+} /*capitalize answer from prompt*/
+
+const PlayerSelection = capitalize(getPlayerSelection())
+
+
+function playRound(PlayerSelection, ComputerSelection) {
+    if (PlayerSelection == ComputerSelection) {
+        return "It's a tie.";
+    }
+
+    else if (PlayerSelection == "Rock" && ComputerSelection == "Scissors") {
+        return "You chose Rock. You won!";
+    }
+
+    else if (PlayerSelection == "Rock" && ComputerSelection == "Paper") {
+        return "You chose Rock. You lose!";
+    }
+
+    else if (PlayerSelection == "Paper" && ComputerSelection == "Scissors") {
+        return "You chose Paper. You lose!";
+    }
+
+    else if (PlayerSelection == "Paper" && ComputerSelection == "Rock") {
+        return "You chose Paper. You won!";
+    }
+
+    else if (PlayerSelection == "Scissors" && ComputerSelection == "Paper") {
+        return "You chose Scissors. You won!";
+    }
+
+    else if (PlayerSelection == "Scissors" && ComputerSelection == "Rock") {
+        return "You chose Scissors. You lose!";
+    }
 }
 
-console.log("You chose " + capitalize(PlayerSelection))
 
-
+console.log(playRound(PlayerSelection, ComputerSelection));
 

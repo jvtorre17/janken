@@ -1,22 +1,23 @@
 
 function getComputerSelection() {
-  var ComputerSelection = Math.floor(Math.random() * 3)
+  var CompRandom = Math.floor(Math.random() * 3)
   
-    if (ComputerSelection == 0) {
-        console.log("Rock");
+    if (CompRandom == 0) {
+        return "Rock";
     }
 
-    else if (ComputerSelection == 1){
-        console.log("Paper");
+    else if (CompRandom == 1){
+        return "Paper";
     }
 
-    else if(ComputerSelection == 2){
-        console.log("Scissors");
+    else if(CompRandom == 2){
+        return "Scissors";
     }
 
 }
 
-/*getComputerSelection()*/
+const ComputerSelection = getComputerSelection()
+
 
 function getPlayerSelection() {
     return prompt("Choose Your Weapon.");

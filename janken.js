@@ -61,5 +61,19 @@ function playRound(PlayerSelection, ComputerSelection) {
 }
 
 
-console.log(playRound(PlayerSelection, ComputerSelection));
+/*console.log(playRound(PlayerSelection, ComputerSelection));*/
 
+function game() {
+    getComputerSelection();
+    const ComputerSelection = capitalize(getComputerSelection());
+    getPlayerSelection();
+    const PlayerSelection = capitalize(getPlayerSelection());
+    playRound(PlayerSelection, ComputerSelection);
+    console.log(playRound(PlayerSelection, ComputerSelection));
+}
+
+game()
+game()
+game()
+game()
+game()
